@@ -126,6 +126,8 @@ for word in glove:
     word = word.split()
     vector = np.asarray(word[1:], dtype='float32')
     words[word[0]] = vector
+
+glove.close()
     
 def semantic(row, attr):
     #Get embedding for each word in the input string
